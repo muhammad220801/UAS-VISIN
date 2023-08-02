@@ -2,7 +2,7 @@
 
 A. Untuk tabulasi silang mengenai ini, kita membutuhkan 2 tabel pada dataset yaitu tabel "cause" dan tabel "total death". Untuk melakukannya, ikuti langkah-langkah berikut:
 
-1. Buka file datasetnya di spreadsheet.
+1. Buka file datasetnya di spreadsheet, data set yang saya gunakan yaitu Penyebab Kematian di Indonesia yang Dilaporkan - Clean.csv.
 2. Buka Google Apps Script (App Script).
 
 B. Berikut adalah kode yang digunakan untuk melakukan tabulasi silang:
@@ -420,3 +420,6 @@ setelah masukkan kode script diatas maka hasilnya akan  sperti ini
 | Tahun 2019 |           7 |
 | Tahun 2020 |           4 |
 | Tahun 2021 |           4 |
+
+untuk detail dari tabulasi silang bisa dilihat dilink berikut
+https://docs.google.com/spreadsheets/d/1AWUgaSZsmuxHiaBl_T7Vhh3WzpVQefBhs3cjxhuVNmg/edit?usp=sharing
