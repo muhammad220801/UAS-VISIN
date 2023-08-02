@@ -50,7 +50,7 @@ function createCrossTabulation() {
   var dataRangeResult = resultSheet.getRange(2, 1, crossTabArray.length, headers.length);
   var resultValues = crossTabArray.map(row => headers.map(header => row[header]));
   dataRangeResult.setValues(resultValues);
-}
+}```
 
  
 C. Setelah mengetik kode di atas, klik jalankan, maka secara otomatis sistem akan melakukan tabulasi silang penyebab kematian. Dalam jawaban saya, saya telah mengurutkan dari penyebab kematian tertinggi ke penyebab terendah, sehingga hasil dari tabulasi silang akan seperti berikut:
