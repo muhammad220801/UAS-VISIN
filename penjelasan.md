@@ -1,8 +1,14 @@
-no 1. data tentang penyebab kematian diindonesia
-A. untuk tabulasi silang mengenai ini kita butuh kan 2 tabel pada dataset yaitu tabel cause dan tabel total death. untuk melakukannya kita buka dulu file datasetnya di spreadsheet lalu buka app script.
-B. untuk kode nya seperti dibawah ini.
+## No 1. Data Tentang Penyebab Kematian di Indonesia
 
-`function createCrossTabulation() {
+A. Untuk tabulasi silang mengenai ini, kita membutuhkan 2 tabel pada dataset yaitu tabel "cause" dan tabel "total death". Untuk melakukannya, ikuti langkah-langkah berikut:
+
+1. Buka file datasetnya di spreadsheet.
+2. Buka Google Apps Script (App Script).
+
+B. Berikut adalah kode yang digunakan untuk melakukan tabulasi silang:
+
+```javascript
+function createCrossTabulation() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Penyebab Kematian di Indonesia yang Dilaporkan - Clean.csv"); // Ganti dengan nama sheet Anda
   var dataRange = sheet.getDataRange();
@@ -44,7 +50,8 @@ B. untuk kode nya seperti dibawah ini.
   var dataRangeResult = resultSheet.getRange(2, 1, crossTabArray.length, headers.length);
   var resultValues = crossTabArray.map(row => headers.map(header => row[header]));
   dataRangeResult.setValues(resultValues);
-}`
+}
+
  
 / C. setelah mengetik kode diatas lalu klik jalankan, maka secara otomatis sistem akan mengtabulasi silang penyebab kematian,yang mana dalam jawaban saya, saya mengurutkan dari penyebab kematian tertinggi ke penyebab terendah maka hasil dari tabulasi silang akan seperti dibawah ini
 
