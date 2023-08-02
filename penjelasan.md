@@ -7,7 +7,7 @@ A. Untuk tabulasi silang mengenai ini, kita membutuhkan 2 tabel pada dataset yai
 
 B. Berikut adalah kode yang digunakan untuk melakukan tabulasi silang:
 
-
+```
 javascript
 function createCrossTabulation() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
