@@ -235,7 +235,7 @@ C. Setelah mengetik kode di atas, klik jalankan, maka secara otomatis sistem aka
 | Wabah Penyakit (Epidemi)                      |           0 |
 
 
-##2. Data tentang Jumlah Kematian Berdasarkan Tahun dan Tipe
+## 2. Data tentang Jumlah Kematian Berdasarkan Tahun dan Tipe
 
 A. Pada kasus kali ini, saya akan mengtabulasi silangkan dataset berdasarkan tipe-tipenya yaitu Bencana Alam, Non-Bencana Alam, dan Bencana Sosial.
 
