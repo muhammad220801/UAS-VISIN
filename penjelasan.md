@@ -53,7 +53,7 @@ function createCrossTabulation() {
 }
 
  
-/ C. setelah mengetik kode diatas lalu klik jalankan, maka secara otomatis sistem akan mengtabulasi silang penyebab kematian,yang mana dalam jawaban saya, saya mengurutkan dari penyebab kematian tertinggi ke penyebab terendah maka hasil dari tabulasi silang akan seperti dibawah ini
+C. Setelah mengetik kode di atas, klik jalankan, maka secara otomatis sistem akan melakukan tabulasi silang penyebab kematian. Dalam jawaban saya, saya telah mengurutkan dari penyebab kematian tertinggi ke penyebab terendah, sehingga hasil dari tabulasi silang akan seperti berikut:
 
 | Cause                                              | Total Death |
 |----------------------------------------------------|------------:|
@@ -240,10 +240,11 @@ function createCrossTabulation() {
 | Wabah Penyakit (Epidemi)                      |           0 |
 
 
-2. data tentang jumlah kematian berdasarkan tahun dan tipe
+2. Data tentang Jumlah Kematian Berdasarkan Tahun dan Tipe
 
-A. pada kasus kali ini saya akan mengtabulasi silangkan dataset berdasarkan tipe-tipenya yaitu Bencana Alam, Non-Bencana Alam, dan Bencana Sosial
-B. kita mulai dari Bencana Alam dan Non-Alam pertama buka app script lalu masukkan kode dibawah ini.
+A. Pada kasus kali ini, saya akan mengtabulasi silangkan dataset berdasarkan tipe-tipenya yaitu Bencana Alam, Non-Bencana Alam, dan Bencana Sosial.
+
+B. Kita mulai dari Bencana Alam dan Non-Alam pertama buka app script lalu masukkan kode di bawah ini:
 
 `function createCrossTabulationByType() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
