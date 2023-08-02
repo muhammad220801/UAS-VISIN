@@ -242,6 +242,7 @@ A. Pada kasus kali ini, saya akan mengtabulasi silangkan dataset berdasarkan tip
 B. Kita mulai dari Bencana Alam dan Non-Alam pertama buka app script lalu masukkan kode di bawah ini:
 
 ```
+javascript
 function createCrossTabulationByType() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Penyebab Kematian di Indonesia yang Dilaporkan - Clean.csv"); // Ganti dengan nama sheet Anda
@@ -295,7 +296,6 @@ function createCrossTabulationByType() {
   var dataRangeResultAlam = resultSheetAlam.getRange(2, 1, crossTabArrayAlam.length, 2);
   var resultValuesAlam = crossTabArrayAlam.map(row => [row["Year"], row["Total Death"]]);
   dataRangeResultAlam.setValues(resultValuesAlam);
-
   var resultSheetNonAlam = ss.insertSheet("Death Type: Non Bencana Alam");
   resultSheetNonAlam.getRange(1, 1, 1, 2).setValues([["Year", "Total Death"]]);
   var dataRangeResultNonAlam = resultSheetNonAlam.getRange(2, 1, crossTabArrayNonAlam.length, 2);
@@ -361,6 +361,7 @@ lanjut ke Bencana sosial.
 masukkan kode berikut.
 
 ```
+javascript
 function createCrossTabulationByType() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Penyebab Kematian di Indonesia yang Dilaporkan - Clean.csv"); // Ganti dengan nama sheet Anda
