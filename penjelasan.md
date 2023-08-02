@@ -241,26 +241,23 @@ A. Pada kasus kali ini, saya akan mengtabulasi silangkan dataset berdasarkan tip
 
 B. Kita mulai dari Bencana Alam dan Non-Alam pertama buka app script lalu masukkan kode di bawah ini:
 
-`function createCrossTabulationByType() {
+```
+function createCrossTabulationByType() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Penyebab Kematian di Indonesia yang Dilaporkan - Clean.csv"); // Ganti dengan nama sheet Anda
-
   // Get data for each type
   var dataRange = sheet.getDataRange();
   var data = dataRange.getValues();
-
   // Create separate cross-tabulation objects for each type
   var crossTabAlam = {};
   var crossTabNonAlam = {};
   var crossTabSosial = {};
-
   // Iterate through each row of the data
   for (var i = 1; i < data.length; i++) {
     var row = data[i];
     var year = "Tahun " + row[2].toString(); // Year column with label
     var type = row[1]; // Type column
     var totalDeath = row[4]; // Total Death column
-
     // Check the type and add the data to the appropriate cross-tabulation object
     if (type === "Bencana Alam") {
       var key = year;
@@ -282,20 +279,16 @@ B. Kita mulai dari Bencana Alam dan Non-Alam pertama buka app script lalu masukk
       crossTabNonAlam[key]["Total Death"] += totalDeath;
     }
   }
-
   // Convert the cross-tabulation objects into arrays
   var crossTabArrayAlam = Object.values(crossTabAlam);
   var crossTabArrayNonAlam = Object.values(crossTabNonAlam);
-
   // Sort the arrays by Year
   crossTabArrayAlam.sort(function(a, b) {
     return a.Year.localeCompare(b.Year);
   });
-
   crossTabArrayNonAlam.sort(function(a, b) {
     return a.Year.localeCompare(b.Year);
   });
-
   // Write the headers and data to new sheets
   var resultSheetAlam = ss.insertSheet("Death Type: Bencana Alam");
   resultSheetAlam.getRange(1, 1, 1, 2).setValues([["Year", "Total Death"]]);
@@ -308,7 +301,8 @@ B. Kita mulai dari Bencana Alam dan Non-Alam pertama buka app script lalu masukk
   var dataRangeResultNonAlam = resultSheetNonAlam.getRange(2, 1, crossTabArrayNonAlam.length, 2);
   var resultValuesNonAlam = crossTabArrayNonAlam.map(row => [row["Year"], row["Total Death"]]);
   dataRangeResultNonAlam.setValues(resultValuesNonAlam);
-}`
+}
+```
 
 setelah jalankan script di atas maka hasil dari tabulasi silang akan menjadi seperti ini
 
@@ -366,24 +360,21 @@ Bencana Non-Alam
 lanjut ke Bencana sosial.
 masukkan kode berikut.
 
-`function createCrossTabulationByType() {
+```
+function createCrossTabulationByType() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Penyebab Kematian di Indonesia yang Dilaporkan - Clean.csv"); // Ganti dengan nama sheet Anda
-
   // Get data for each type
   var dataRange = sheet.getDataRange();
   var data = dataRange.getValues();
-
   // Create separate cross-tabulation objects for each type
   var crossTabSosial = {};
-
   // Iterate through each row of the data
   for (var i = 1; i < data.length; i++) {
     var row = data[i];
     var year = "Tahun " + row[2].toString(); // Year column with label
     var type = row[1]; // Type column
     var totalDeath = row[4]; // Total Death column
-
     // Check if the type is "Bencana Sosial" and add the data to the cross-tabulation object
     if (type === "Bencana Sosial") {
       var key = year;
@@ -396,22 +387,20 @@ masukkan kode berikut.
       crossTabSosial[key]["Total Death"] += totalDeath;
     }
   }
-
   // Convert the cross-tabulation object into an array
   var crossTabArraySosial = Object.values(crossTabSosial);
-
   // Sort the array by Year
   crossTabArraySosial.sort(function(a, b) {
     return a.Year.localeCompare(b.Year);
   });
-
   // Write the headers and data to a new sheet
   var resultSheetSosial = ss.insertSheet("Death Type: Bencana Sosial");
   resultSheetSosial.getRange(1, 1, 1, 2).setValues([["Year", "Total Death"]]);
   var dataRangeResultSosial = resultSheetSosial.getRange(2, 1, crossTabArraySosial.length, 2);
   var resultValuesSosial = crossTabArraySosial.map(row => [row["Year"], row["Total Death"]]);
   dataRangeResultSosial.setValues(resultValuesSosial);
-}`
+}
+```
 
 setelah masukkan kode script diatas maka hasilnya akan  sperti ini
 
