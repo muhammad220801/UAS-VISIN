@@ -1,8 +1,8 @@
-/no 1. data tentang penyebab kematian diindonesia
-/A. untuk tabulasi silang mengenai ini kita butuh kan 2 tabel pada dataset yaitu tabel cause dan tabel total death. untuk melakukannya kita buka dulu file datasetnya di spreadsheet lalu buka app script.
-/B. untuk kode nya seperti dibawah ini.
+no 1. data tentang penyebab kematian diindonesia
+A. untuk tabulasi silang mengenai ini kita butuh kan 2 tabel pada dataset yaitu tabel cause dan tabel total death. untuk melakukannya kita buka dulu file datasetnya di spreadsheet lalu buka app script.
+B. untuk kode nya seperti dibawah ini.
 
-```function createCrossTabulation() {
+`function createCrossTabulation() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Penyebab Kematian di Indonesia yang Dilaporkan - Clean.csv"); // Ganti dengan nama sheet Anda
   var dataRange = sheet.getDataRange();
@@ -44,7 +44,7 @@
   var dataRangeResult = resultSheet.getRange(2, 1, crossTabArray.length, headers.length);
   var resultValues = crossTabArray.map(row => headers.map(header => row[header]));
   dataRangeResult.setValues(resultValues);
-}```.
+}`
  
 / C. setelah mengetik kode diatas lalu klik jalankan, maka secara otomatis sistem akan mengtabulasi silang penyebab kematian,yang mana dalam jawaban saya, saya mengurutkan dari penyebab kematian tertinggi ke penyebab terendah maka hasil dari tabulasi silang akan seperti dibawah ini
 
@@ -233,12 +233,12 @@
 | Wabah Penyakit (Epidemi)                      |           0 |
 
 
-/2. data tentang jumlah kematian berdasarkan tahun dan tipe
+2. data tentang jumlah kematian berdasarkan tahun dan tipe
 
-/A. pada kasus kali ini saya akan mengtabulasi silangkan dataset berdasarkan tipe-tipenya yaitu Bencana Alam, Non-Bencana Alam, dan Bencana Sosial
-/B. kita mulai dari Bencana Alam dan Non-Alam pertama buka app script lalu masukkan kode dibawah ini.
+A. pada kasus kali ini saya akan mengtabulasi silangkan dataset berdasarkan tipe-tipenya yaitu Bencana Alam, Non-Bencana Alam, dan Bencana Sosial
+B. kita mulai dari Bencana Alam dan Non-Alam pertama buka app script lalu masukkan kode dibawah ini.
 
-```function createCrossTabulationByType() {
+`function createCrossTabulationByType() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Penyebab Kematian di Indonesia yang Dilaporkan - Clean.csv"); // Ganti dengan nama sheet Anda
 
@@ -305,11 +305,11 @@
   var dataRangeResultNonAlam = resultSheetNonAlam.getRange(2, 1, crossTabArrayNonAlam.length, 2);
   var resultValuesNonAlam = crossTabArrayNonAlam.map(row => [row["Year"], row["Total Death"]]);
   dataRangeResultNonAlam.setValues(resultValuesNonAlam);
-}```.
+}`
 
-//setelah jalankan script di atas maka hasil dari tabulasi silang akan menjadi seperti ini
+setelah jalankan script di atas maka hasil dari tabulasi silang akan menjadi seperti ini
 
-//Bencana Alam
+Bencana Alam
 
 | Year      | Total Death |
 |-----------|------------:|
@@ -331,7 +331,7 @@
 | Tahun 2021 |         583 |
 
 
-//Bencana Non-Alam
+Bencana Non-Alam
  
 | Year      | Total Death |
 |-----------|------------:|
@@ -360,10 +360,10 @@
 | Tahun 2022 |       12876 |
 
 
-//lanjut ke Bencana sosial
-//masukkan kode berikut.
+lanjut ke Bencana sosial.
+masukkan kode berikut.
 
-```function createCrossTabulationByType() {
+`function createCrossTabulationByType() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Penyebab Kematian di Indonesia yang Dilaporkan - Clean.csv"); // Ganti dengan nama sheet Anda
 
@@ -408,9 +408,9 @@
   var dataRangeResultSosial = resultSheetSosial.getRange(2, 1, crossTabArraySosial.length, 2);
   var resultValuesSosial = crossTabArraySosial.map(row => [row["Year"], row["Total Death"]]);
   dataRangeResultSosial.setValues(resultValuesSosial);
-}```.
+}`
 
-````setelah masukkan kode script diatas maka hasilnya akan  sperti ini````
+setelah masukkan kode script diatas maka hasilnya akan  sperti ini
 
 | Year      | Total Death |
 |-----------|------------:|
