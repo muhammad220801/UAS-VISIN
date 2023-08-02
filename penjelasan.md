@@ -7,23 +7,21 @@ A. Untuk tabulasi silang mengenai ini, kita membutuhkan 2 tabel pada dataset yai
 
 B. Berikut adalah kode yang digunakan untuk melakukan tabulasi silang:
 
-```javascript
+
+javascript
 function createCrossTabulation() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Penyebab Kematian di Indonesia yang Dilaporkan - Clean.csv"); // Ganti dengan nama sheet Anda
   var dataRange = sheet.getDataRange();
   var data = dataRange.getValues();
-  
   // Define headers for the cross-tabulation
   var headers = ["Cause", "Total Death"];
   var crossTab = {};
-  
   // Iterate through each row of the data
   for (var i = 1; i < data.length; i++) {
     var row = data[i];
     var cause = row[0]; // Cause column
     var totalDeath = row[4]; // Total Death column
-    
     // If the cause does not exist in the cross-tabulation object, initialize it
     if (!crossTab[cause]) {
       crossTab[cause] = {
@@ -31,26 +29,23 @@ function createCrossTabulation() {
         "Total Death": 0
       };
     }
-    
     // Accumulate the total death for the cause
     crossTab[cause]["Total Death"] += totalDeath;
   }
-  
   // Convert the cross-tabulation object into an array
   var crossTabArray = Object.values(crossTab);
-  
   // Sort the array by "Total Death" in descending order
   crossTabArray.sort(function(a, b) {
     return b["Total Death"] - a["Total Death"];
   });
-  
   // Write the headers and data to a new sheet
   var resultSheet = ss.insertSheet("Death Summary");
   resultSheet.getRange(1, 1, 1, headers.length).setValues([headers]);
   var dataRangeResult = resultSheet.getRange(2, 1, crossTabArray.length, headers.length);
   var resultValues = crossTabArray.map(row => headers.map(header => row[header]));
   dataRangeResult.setValues(resultValues);
-}```
+}
+```
 
  
 C. Setelah mengetik kode di atas, klik jalankan, maka secara otomatis sistem akan melakukan tabulasi silang penyebab kematian. Dalam jawaban saya, saya telah mengurutkan dari penyebab kematian tertinggi ke penyebab terendah, sehingga hasil dari tabulasi silang akan seperti berikut:
