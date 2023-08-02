@@ -47,21 +47,21 @@ function createCrossTabulation() {
  
  C. setelah mengetik kode diatas lalu klik jalankan, maka secara otomatis sistem akan mengtabulasi silang penyebab kematian,yang mana dalam jawaban saya, saya mengurutkan dari penyebab kematian tertinggi ke penyebab terendah maka hasil dari tabulasi silang akan seperti dibawah ini
 
-Cause	Total Death
-COVID-19	156970
-Tsunami Aceh (Meninggal)	129171
-Penyakit Sistem Sirkulasi Darah	84298
-Penyakit Infeksi & Parasit Tertentu	59700
-Kecelakaan Lalu Lintas	59604
-Tuberkulosis	39315
-Kondisi Tertentu yang bermula pada masa Perinatal	38370
-Tsunami Aceh (Hilang)	37527
-Penyakit Sistem Napas	27635
-Penyakit Sistem Cerna	24941
-Cedera, Keracunan, dan Akibat Sebab Luar Tertentu Lainnya	21813
-Penyakit Endokrin, Nutrisi, dan Metabolik	20615
-Penyakit Sistem Kemih Kelamin	17239
-Neoplasma	17117
+|Cause	| Total Death |
+COVID-19 |	156970 |
+Tsunami Aceh | (Meninggal)	129171 |
+Penyakit Sistem | Sirkulasi Darah	84298 |
+Penyakit Infeksi & Parasit Tertentu |	59700 |
+Kecelakaan Lalu Lintas |	59604 |
+Tuberkulosis |	39315 |
+Kondisi Tertentu yang bermula pada masa Perinatal	38370 |
+Tsunami Aceh (Hilang)	 | 37527 |
+Penyakit Sistem Napas |	27635 |
+Penyakit Sistem Cerna |	24941 |
+Cedera, Keracunan, dan Akibat Sebab Luar Tertentu Lainnya	 | 21813 |
+Penyakit Endokrin, Nutrisi, dan Metabolik	 | 20615 | 
+Penyakit Sistem Kemih Kelamin |	17239|
+Neoplasma |	17117 |
 Gejala, Tanda & Penemuan Laboratorium, Klinik Abnormal YTK	14765
 Demam Berdarah Dengue (DBD)	14593
 Stroke tidak menyebut pendarahan atau infark	13284
